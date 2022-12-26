@@ -22,10 +22,16 @@
 
     color: #fff;
     background-color: #000;
+
+    z-index: 1;
 }
 
 .nav {
     display: inline-block;
+}
+
+.subnav {
+    width: 160px;
 }
 
 .nav,

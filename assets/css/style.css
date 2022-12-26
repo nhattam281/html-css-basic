@@ -1,0 +1,116 @@
+/* Reset Css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#app {
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 46px;
+    box-shadow: 0 0 2px 0 rgb(0, 0, 0);
+
+    color: #fff;
+    background-color: #000;
+}
+
+.nav {
+    display: inline-block;
+}
+
+.nav,
+.subnav {
+    list-style-type: none;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav > li > a {
+    display: block;
+
+    color: #fff;
+
+    text-transform: uppercase;
+}
+
+.nav li a {
+    display: block;
+    padding: 0 24px;
+
+    text-decoration: none;
+    line-height: 46px;
+}
+
+.nav > li:hover > a,
+.nav .subnav li:hover {
+    display: block;
+
+    color: #000;
+    background-color: #ccc;
+}
+
+.nav .subnav {
+    position: absolute;
+
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    background-color: #fff;
+}
+
+.nav .subnav a {
+    display: block;
+
+    color: #000;
+
+    line-height: 38px;
+}
+
+.nav li:hover .subnav {
+    display: block;
+}
+
+.nav .nav-icon {
+    font-size: 10px;
+}
+
+#header .search-btn {
+    padding: 0 23px;
+    float: right;
+}
+
+#header .search-icon {
+    line-height: 46px;
+    /* padding: 0 24px; */
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#sidebar {
+    min-height: 960px;
+    background-color: #333;
+}
+
+#content {
+    min-height: 1000px;
+    background-color: #fff;
+}
+
+#footer {
+}

@@ -22,6 +22,10 @@ html {
     text-align: center;
 }
 
+.pull-right {
+    float: right !important;
+}
+
 .mt-8 {
     margin-top: 8px !important;
 }
@@ -56,6 +60,24 @@ html {
 
 .col-third {
     width: calc(100% / 3);
+}
+
+/* common  button*/
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+
+    color: #fff;
+    background-color: #000;
+
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
 }
 
 /* app */
@@ -333,22 +355,6 @@ html {
     line-height: 1.4;
 }
 
-.place-buy-btn {
-    display: inline-block;
-    padding: 8px 16px;
-    border: none;
-
-    color: #fff;
-    background-color: #000;
-
-    text-decoration: none;
-}
-
-.place-buy-btn:hover {
-    color: #000;
-    background-color: #ccc;
-}
-
 /* contact */
 .contact-content {
     padding: 32px;
@@ -373,22 +379,9 @@ html {
     width: 100%;
     border: 1px solid #ccc;
 }
-
-.contact-form .form-submit-btn {
-    float: right;
-
-    padding: 12px 18px;
-    border: none;
-
-    color: #fff;
-    background-color: #000;
-
-    text-transform: uppercase;
-}
-
-.contact-form .form-submit-btn:hover {
-    color: #000;
-    background-color: #ccc;
+/* map section */
+.map-section img {
+    width: 100%;
 }
 
 /* popup hiện lên khi nhấn vào nút Buy ticket trong phần tour days */
@@ -509,6 +502,23 @@ html {
 
 /* Đây là phần chân trang */
 #footer {
-    min-height: 500px;
+    padding: 64px 16px;
     background-color: #f1f1f1;
+    text-align: center;
+    font-size: 24px;
+}
+
+#footer a {
+    color: #747474;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    opacity: 0.8;
+}
+
+#footer .copyright {
+    margin: 15px 0;
+    line-height: 1.5;
+    font-size: 16px;
 }

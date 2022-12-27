@@ -9,6 +9,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* common */
 .clear {
     clear: both;
 }
@@ -17,7 +18,49 @@ html {
     color: #fff !important;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: calc(100% / 2);
+}
+
+.col-third {
+    width: calc(100% / 3);
+}
+
+/* app */
 #app {
+    /* thẻ div bao bọc toàn bộ trang web*/
 }
 
 #header {
@@ -153,6 +196,7 @@ html {
 }
 
 #content {
+    /* bao bọc toàn bộ phần content */
 }
 
 #content .content-section {
@@ -186,12 +230,7 @@ html {
 }
 
 #content .member-item {
-    float: left;
-
-    width: calc(100% / 3);
     margin-top: 48px;
-
-    text-align: center;
 }
 
 #content .member-name {
@@ -252,13 +291,11 @@ html {
 
 /* Place */
 .place-list {
-    margin: 15px -8px 48px;
+    margin-top: 15px;
+    margin-bottom: 48px;
 }
 
 .place-items {
-    float: left;
-
-    padding: 8px;
     width: calc(100% / 3);
 }
 
@@ -299,6 +336,7 @@ html {
 .place-buy-btn {
     display: inline-block;
     padding: 8px 16px;
+    border: none;
 
     color: #fff;
     background-color: #000;
@@ -311,5 +349,166 @@ html {
     background-color: #ccc;
 }
 
+/* contact */
+.contact-content {
+    padding: 32px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*='ti-'] {
+    display: inline-block;
+    width: 30px;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.contact-form .form-submit-btn {
+    float: right;
+
+    padding: 12px 18px;
+    border: none;
+
+    color: #fff;
+    background-color: #000;
+
+    text-transform: uppercase;
+}
+
+.contact-form .form-submit-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+/* popup hiện lên khi nhấn vào nút Buy ticket trong phần tour days */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* Hiển thị nổi lên trên các phần còn lại của trang web*/
+    z-index: 2;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    width: 900px;
+    /* responsive cho modal container*/
+    max-width: calc(100%-36px);
+    min-height: 470px;
+    background-color: #fff;
+
+    font-size: 15px;
+
+    /* tạo animation chuyển động hiển thị cho modal container */
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 12px;
+
+    color: #fff;
+
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.modal-close:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.modal-header {
+    position: relative;
+
+    padding: 48px 16px;
+
+    color: #fff;
+    background-color: #009688;
+
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 24px;
+
+    font-size: 15px;
+}
+
+#modal-pay-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+
+    color: #fff;
+    background-color: #009688;
+
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#modal-pay-btn:hover {
+    opacity: 0.6;
+}
+
+.modal-footer {
+    margin-top: 40px;
+
+    text-align: right;
+}
+
+/* tạo ra hiệu ứng hiển thị */
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-150px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Đây là phần chân trang */
 #footer {
+    min-height: 500px;
+    background-color: #f1f1f1;
 }

@@ -71,8 +71,8 @@
                         exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat.
                     </p>
-                    <div class="member-list">
-                        <div class="member-item">
+                    <div class="row member-list">
+                        <div class="col col-third member-item text-center">
                             <p class="member-name">Name</p>
                             <img
                                 src="./assets/img/band-member/member1.jpg"
@@ -80,7 +80,7 @@
                                 class="member-img"
                             />
                         </div>
-                        <div class="member-item">
+                        <div class="col col-third member-item text-center">
                             <p class="member-name">Name</p>
                             <img
                                 src="./assets/img/band-member/member1.jpg"
@@ -88,7 +88,7 @@
                                 class="member-img"
                             />
                         </div>
-                        <div class="member-item">
+                        <div class="col col-third member-item text-center">
                             <p class="member-name">Name</p>
                             <img
                                 src="./assets/img/band-member/member1.jpg"
@@ -97,7 +97,6 @@
                             />
                         </div>
                     </div>
-                    <div class="clear"></div>
                 </div>
 
                 <!-- Tour Section -->
@@ -117,8 +116,8 @@
                             <li>November <span class="quantity">3</span></li>
                         </ul>
                         <!-- Place -->
-                        <div class="place-list">
-                            <div class="place-items">
+                        <div class="row place-list">
+                            <div class="col col-third">
                                 <img
                                     src="./assets/img/places/newyork.jpg"
                                     alt="NewYork"
@@ -131,12 +130,12 @@
                                         Praesent tincidunt sed tellus ut rutrum
                                         sed vitae justo.
                                     </p>
-                                    <a href="#" class="place-buy-btn"
-                                        >Buy Tickets</a
-                                    >
+                                    <button class="place-buy-btn js-place-buy-btn"
+                                        >Buy Tickets</
+                                    ></button>
                                 </div>
                             </div>
-                            <div class="place-items">
+                            <div class="col col-third">
                                 <img
                                     src="./assets/img/places/paris.jpg"
                                     alt="NewYork"
@@ -149,12 +148,12 @@
                                         Praesent tincidunt sed tellus ut rutrum
                                         sed vitae justo.
                                     </p>
-                                    <a href="#" class="place-buy-btn"
-                                        >Buy Tickets</a
-                                    >
+                                    <button class="place-buy-btn js-place-buy-btn"
+                                        >Buy Tickets</
+                                    ></button>
                                 </div>
                             </div>
-                            <div class="place-items">
+                            <div class="col col-third">
                                 <img
                                     src="./assets/img/places/sanfran.jpg"
                                     alt="NewYork"
@@ -167,12 +166,11 @@
                                         Praesent tincidunt sed tellus ut rutrum
                                         sed vitae justo.
                                     </p>
-                                    <a href="#" class="place-buy-btn"
-                                        >Buy Tickets</a
-                                    >
+                                    <button class="place-buy-btn js-place-buy-btn"
+                                        >Buy Tickets</
+                                    ></button>
                                 </div>
                             </div>
-                            <div class="clear"></div>
                         </div>
                     </div>
                 </div>
@@ -181,10 +179,82 @@
                 <div class="content-section">
                     <h2 class="section-heading">CONTACT</h2>
                     <p class="section-sub-heading">Fan? Drop a note!</p>
+                    <div class="row contact-content">
+                        <div class="col col-half contact-info">
+                            <p><i class="ti-location-pin"></i>Chicago, US</p>
+                            <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                            <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                        </div>
+                        <div class="col col-half contact-form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col col-half">
+                                        <input type="text" class="form-control" required placeholder="Name">
+                                    </div>
+                                    <div class="col col-half">
+                                        <input type="email" class="form-control" required placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="row mt-8">
+                                    <div class="col col-full">
+                                        <input type="text" class="form-control" required placeholder="Message">
+                                    </div>
+                                </div>
+                                <input type="submit" class="form-submit-btn mt-16" value="Send">
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div id="footer"></div>
         </div>
+
+        <!-- Popup hiển thị khi nhấn vào button Buy Tickets trong phần Tour Days -->
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <header class="modal-header">
+                    <div class="modal-close js-modal-close">
+                        <i class="ti-close"></i>
+                    </div>
+                    <i class="ti-bag"></i>
+                    Tickets
+                </header>
+
+                <div class="modal-body">
+                    <label for="ticket-quantity" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input
+                        type="number"
+                        class="modal-input"
+                        id="ticket-quantity"
+                        placeholder="How many?"
+                    />
+
+                    <label for="ticket-email" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Send To
+                    </label>
+                    <input
+                        type="email"
+                        class="modal-input"
+                        id="ticket-email"
+                        placeholder="Enter email"
+                    />
+
+                    <button id="modal-pay-btn">
+                        Pay
+                        <i class="ti-check"></i>
+                    </button>
+
+                    <footer class="modal-footer">
+                        <p class="modal-help">Need <a href="">help</a></p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script src="/index.js"></script>
     </body>
 </html>

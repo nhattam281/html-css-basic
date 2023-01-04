@@ -73,6 +73,7 @@ html {
     background-color: #000;
 
     text-decoration: none;
+    text-align: center;
 }
 
 .btn:hover {
@@ -106,7 +107,7 @@ html {
 }
 
 .subnav {
-    width: 160px;
+    min-width: 160px;
 }
 
 .nav,
@@ -171,11 +172,13 @@ html {
     font-size: 10px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
     padding: 0 23px;
     float: right;
 }
 
+#header .menu-icon,
 #header .search-icon {
     line-height: 46px;
     /* padding: 0 24px; */
@@ -184,6 +187,11 @@ html {
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+    color: #000;
+    background-color: #ccc;
 }
 
 #slider {
@@ -224,10 +232,13 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding-top: 64px;
     padding-bottom: 64px;
     margin-left: auto;
     margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
 }
 
 #content .section-heading {
@@ -371,6 +382,15 @@ html {
     width: 30px;
 }
 
+.contact-info a {
+    color: #101aef;
+    opacity: 0.9;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
 .contact-form {
     font-size: 15px;
 }
@@ -410,7 +430,7 @@ html {
 .modal-container {
     width: 900px;
     /* responsive cho modal container*/
-    max-width: calc(100%-36px);
+    max-width: calc(100% - 40px);
     min-height: 470px;
     background-color: #fff;
 
@@ -457,7 +477,7 @@ html {
 
 .modal-label {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .modal-input {

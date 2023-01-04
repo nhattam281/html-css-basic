@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
         <link
             rel="stylesheet"
             href="./assets/fonts/themify-icons/themify-icons.css"
@@ -38,6 +39,10 @@
                 <!-- Begin: Search Icon -->
                 <div class="search-btn">
                     <i class="search-icon ti-search"></i>
+                </div>
+
+                <div id="mobile-menu" class="mobile-menu-btn">
+                    <i class="menu-icon ti-menu"></i>
                 </div>
                 <!-- End: Search Icon -->
             </div>
@@ -118,7 +123,7 @@
                         </ul>
                         <!-- Place -->
                         <div class="row place-list">
-                            <div class="col col-third">
+                            <div class="col col-third s-col-full mt-16">
                                 <img
                                     src="./assets/img/places/newyork.jpg"
                                     alt="NewYork"
@@ -131,12 +136,12 @@
                                         Praesent tincidunt sed tellus ut rutrum
                                         sed vitae justo.
                                     </p>
-                                    <button class="btn js-place-buy-btn"
+                                    <button class="btn js-place-buy-btn s-full-width"
                                         >Buy Tickets</
                                     ></button>
                                 </div>
                             </div>
-                            <div class="col col-third">
+                            <div class="col col-third s-col-full mt-16">
                                 <img
                                     src="./assets/img/places/paris.jpg"
                                     alt="NewYork"
@@ -149,12 +154,12 @@
                                         Praesent tincidunt sed tellus ut rutrum
                                         sed vitae justo.
                                     </p>
-                                    <button class="btn js-place-buy-btn"
+                                    <button class="btn js-place-buy-btn s-full-width"
                                         >Buy Tickets</
                                     ></button>
                                 </div>
                             </div>
-                            <div class="col col-third">
+                            <div class="col col-third s-col-full mt-16">
                                 <img
                                     src="./assets/img/places/sanfran.jpg"
                                     alt="NewYork"
@@ -167,7 +172,7 @@
                                         Praesent tincidunt sed tellus ut rutrum
                                         sed vitae justo.
                                     </p>
-                                    <button class="btn js-place-buy-btn"
+                                    <button class="btn js-place-buy-btn s-full-width"
                                         >Buy Tickets</
                                     ></button>
                                 </div>
@@ -181,18 +186,18 @@
                     <h2 class="section-heading">CONTACT</h2>
                     <p class="section-sub-heading">Fan? Drop a note!</p>
                     <div class="row contact-content">
-                        <div class="col col-half contact-info">
+                        <div class="col col-half s-col-full contact-info">
                             <p><i class="ti-location-pin"></i>Chicago, US</p>
-                            <p><i class="ti-mobile"></i>Phone: +00 151515</p>
-                            <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                            <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
+                            <p><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
                         </div>
-                        <div class="col col-half contact-form">
+                        <div class="col col-half s-col-full contact-form">
                             <form action="">
                                 <div class="row">
-                                    <div class="col col-half">
+                                    <div class="col col-half s-col-full">
                                         <input type="text" class="form-control" required placeholder="Name">
                                     </div>
-                                    <div class="col col-half">
+                                    <div class="col col-half s-col-full s-mt-8">
                                         <input type="email" class="form-control" required placeholder="Email">
                                     </div>
                                 </div>
@@ -201,7 +206,7 @@
                                         <input type="text" class="form-control" required placeholder="Message">
                                     </div>
                                 </div>
-                                <input type="submit" class="btn pull-right mt-16" value="Send">
+                                <input type="submit" class="btn pull-right mt-16 s-full-width" value="Send">
                             </form>
                         </div>
                     </div>
